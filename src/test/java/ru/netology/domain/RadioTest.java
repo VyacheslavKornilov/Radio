@@ -105,11 +105,20 @@ class RadioTest {
     }
 
     @Test
-    public void enterNotCorrectStation() {
+    public void enterNonCorrectStation() {
         Radio radio = new Radio();
         radio.setCurrentStationNumber(10);
         int expected = 0;
         int actual = radio.getCurrentStationNumber();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void NonCorrectVolumeLevel() {
+        Radio radio = new Radio();
+        radio.setCurrentSoundVolume(11);
+        int expected = 0;
+        int actual = radio.getCurrentSoundVolume();
         assertEquals(expected, actual);
     }
 }
