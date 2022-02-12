@@ -103,4 +103,13 @@ class RadioTest {
         int actual = radio.getCurrentSoundVolume();
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void enterNotCorrectStation() {
+        Radio radio = new Radio();
+        radio.setCurrentStationNumber(10);
+        int expected = 0;
+        int actual = radio.getCurrentStationNumber();
+        assertEquals(expected, actual);
+    }
 }
